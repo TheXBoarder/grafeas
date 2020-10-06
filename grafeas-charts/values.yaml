@@ -1,13 +1,13 @@
 replicaCount: 1
 
 secret:
-  enabled: false
+  enabled: true
 
 ## Grafeas image version
 image:
-  repository: us.gcr.io/grafeas
-  name: grafeas-server
-  tag: v0.1.6
+  repository: thexboarder
+  name: grafeas
+  tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: "grafeas-server"
@@ -19,7 +19,7 @@ fullnameOverride: "grafeas-server"
 ##
 service:
   type: ClusterIP
-  port: 8080
+  port: 443
 
 container:
   port: 8080
